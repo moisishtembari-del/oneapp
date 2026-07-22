@@ -1,0 +1,1 @@
+# API Documentation\n\n## Base URL\n\n```\nhttp://localhost:3001/api\n```\n\n## Endpoints\n\n### Auth\n\n```\nPOST /auth/register\nPOST /auth/login\nGET /auth/me\n```\n\n### Days\n\n```\nGET /days/:date\nPOST /days\nPUT /days/:date\n```\n
