@@ -1,0 +1,1 @@
+## 📝 Description\n\nPlease include a summary of the changes and related context.\n\n## 🎯 Type of Change\n\n- [ ] 🐛 Bug fix\n- [ ] ✨ New feature\n- [ ] 📚 Documentation\n- [ ] 🔧 Configuration\n\n## ✅ Checklist\n\n- [ ] Code follows style guidelines\n- [ ] Self-review completed\n- [ ] Comments added for complex areas\n- [ ] No new warnings\n- [ ] Tests pass locally\n
