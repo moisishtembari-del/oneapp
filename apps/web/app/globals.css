@@ -1,34 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --background: 222 47% 4%;      /* Sfondo base scurissimo per far risaltare il resto */
+  --foreground: 0 0% 100%;       /* Testo principale BIANCO PURO e luminosissimo */
+  
+  --card: 222 47% 10%;           /* Pannelli interni blu notte ben definiti */
+  --card-foreground: 210 40% 98%;
+  
+  --primary: 195 100% 50%;       /* Ciano/Azzurro Neon vivissimo per link attivi e icone */
+  --primary-foreground: 222 47% 4%;
+  
+  --secondary: 217 32% 25%;      /* Grigio-blu visibile per elementi secondari */
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 215 20% 65%;          /* Testo disattivato/secondario reso molto più chiaro */
+  --muted-foreground: 215 20% 75%; /* Incrementato per la massima leggibilità */
+  
+  --accent: 195 100% 45%;        /* Colore di selezione brillante */
+  --accent-foreground: 0 0% 100%;
+  
+  --border: 217 30% 25%;         /* Linee divisorie più chiare e visibili */
+  --radius: 0.75rem;
+}
 
 @layer base {
-  :root {
-    --background: 9 10% 5%;
-    --foreground: 0 0% 95%;
-    --card: 10 8% 12%;
-    --card-foreground: 0 0% 95%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 217 15% 35%;
-    --muted-foreground: 217 8% 56%;
-    --accent: 220 90% 56%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 20% 18%;
-    --input: 217 20% 18%;
-    --ring: 217 91% 60%;
-    --radius: 0.5rem;
-  }
-
   * {
-    @apply border-border;
+    border-color: rgba(255, 255, 255, 0.15) !important; /* Forza i bordi a essere visibili ma eleganti */
   }
-
   body {
-    @apply bg-background text-foreground;
+    background: radial-gradient(circle at 80% 20%, #0c2540 0%, #030712 100%);
+    color: #ffffff;
+    min-height: 100vh;
   }
+}
+
+/* Effetto vetro futuristico ad alto contrasto per pannelli e sidebar */
+.glass-sidebar {
+  background: rgba(10, 25, 47, 0.65) !important;
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.glass-card {
+  background: rgba(15, 32, 67, 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
