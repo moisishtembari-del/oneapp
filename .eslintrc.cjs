@@ -1,0 +1,1 @@
+module.exports = {\n  root: true,\n  extends: [\n    'eslint:recommended',\n    'plugin:@typescript-eslint/recommended',\n    'prettier',\n  ],\n  parser: '@typescript-eslint/parser',\n  plugins: ['@typescript-eslint'],\n  rules: {\n    '@typescript-eslint/no-unused-vars': [\n      'warn',\n      { argsIgnorePattern: '^_' },\n    ],\n  },\n};\n
